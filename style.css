@@ -68,53 +68,14 @@ button {
 }
 
 /* end nav  */
-
-/* start header  */
+ /* start header */
 header .container {
-    display:  flex;
+    display: flex;
     align-items: center;
-     gap: 20px;
-}
-header .container .content .stars {
-  color: gold;
-  display: flex;
-  padding: 7px;
-  border-radius: 20px;
-  align-items: center;
-  border: 1px solid orange;
-  width: 40%;
-  justify-content: center;
-}
-header .container .content .stars p {
-  margin: 0 10px;
-  color: white;
-}
-header .container .content .text h2 {
-  color: white;
-  font-weight: bold;
-  font-size: 55px;
-  margin: 20px 0;
-}
-header .container .content .text p {
-  color: gray;
-  font-size: 20px;
-  margin: 20px 0px;
-}
-header .container .content .btns {
-  display: flex;
-  gap: 20px;
-  align-items: center;
-    margin: 20px 0px;
-
-}
-header .container .content .btns button {
-  width: 250px;
-  height: 50px;
-  padding: 7px;
-  font-size: 20px;
+    gap: 20px;
 }
 
-/* left side  */
+/* LEFT SIDE */
 header .container .left_side {
     width: 50%;
     border: 1px solid aqua;
@@ -124,15 +85,104 @@ header .container .left_side {
     transform-style: preserve-3d;
     will-change: transform;
 }
+
 header .container .left_side .bottom_part {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 250px;
 }
+
 header .container .left_side .bottom_part i {
     color: aqua;
     font-size: 100px;
     filter: drop-shadow(0 0 15px rgb(1, 182, 182));
 }
-/* end header  */
+
+/* CONTENT */
+header .container .content .stars {
+    color: gold;
+    display: flex;
+    padding: 7px;
+    border-radius: 20px;
+    align-items: center;
+    border: 1px solid orange;
+    width: 40%;
+    justify-content: center;
+}
+
+header .container .content .stars p {
+    margin: 0 10px;
+    color: white;
+}
+
+header .container .content .text h2 {
+    color: white;
+    font-weight: bold;
+    font-size: 55px;
+    margin: 20px 0;
+}
+
+header .container .content .text p {
+    color: gray;
+    font-size: 20px;
+    margin: 20px 0px;
+}
+
+header .container .content .btns {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    margin: 20px 0px;
+}
+
+header .container .content .btns button {
+    width: 250px;
+    height: 50px;
+    padding: 7px;
+    font-size: 20px;
+}
+
+/* ================= RESPONSIVE ================= */
+
+/* tablets */
+@media (max-width: 991px) {
+    header .container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    header .container .left_side {
+        width: 100%;
+        margin: auto;
+    }
+
+    header .container .content .stars {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+/* mobile */
+@media (max-width: 640px) {
+
+    header .container .content .btns {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    header .container .content .btns button {
+        width: 100%;
+    }
+
+    header .container .content .text h2 {
+        font-size: 28px;
+    }
+
+    header .container .content .text p {
+        font-size: 16px;
+    }
+}
+
+/* end header */
