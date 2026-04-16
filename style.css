@@ -223,7 +223,7 @@ header .container .content .btns button {
 }
 .about .grid-container{
     display:grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 25px; 
     padding: 40px;
 }
@@ -233,7 +233,7 @@ header .container .content .btns button {
     border-radius:20px;
     padding: 10px 10px;
     cursor: pointer;
-    transition: 0.3s;
+    transition:0.6s;
 }
 .about .card:hover{
     border-color:var(--glass-color) ;
