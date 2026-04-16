@@ -262,5 +262,62 @@ header .container .content .btns button {
     line-height: 1.8;
 }
 
+/* TimeLine section */
+.timeline-section{
+    margin-top: -100px;
 
-
+}
+.timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .timeline::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    border-left: 3px dashed var(--border-color);
+    top: 0;
+    bottom: 0;
+    left: 80%;
+  }
+  .timeline .container {
+    padding: 10px 40px;
+    position: relative;
+    background-color: inherit;
+    width: 50%;
+  }
+    .timeline .container::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: -75px;
+    background-color: var(--glass-color);
+    border: 4px solid var(--main-color);
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+  }
+  .timeline .left {
+    left: 0;
+  }
+  .timeline .content {
+    font-size: smaller;
+    padding: 20px 30px;
+    background-color:rgba(25, 27, 31);
+    border:1px solid var(--border-color);
+    position: relative;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.5s;
+  }
+  .timeline .content:hover{
+    border-color: var(--main-color);
+  }
+  .timeline .content {
+    font-size: smaller;
+  }
+  .timeline .content p{
+    color:var(--p-color);
+  }
