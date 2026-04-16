@@ -12,7 +12,12 @@ body {
 button {
   transition: 0.5s !important;
 }
-
+:root{
+    --main-color:#00d1ff;
+    --glass-color:#1a2226;
+    --border-color:#233a3e;
+    --p-color:rgba(143, 158, 179);
+}
 /* start nav  */
 
 .navbar {
@@ -20,6 +25,7 @@ button {
   color: white;
   box-shadow: 0px 15px 22px rgb(12, 11, 11);
   height: 70px;
+  
 }
 
 .navbar .container {
@@ -55,6 +61,7 @@ button {
   color: white !important;
   font-weight: bold;
 }
+
 @media (max-width: 991px) {
   .navbar-collapse {
     background-color: rgba(2, 6, 11, 0.908);
@@ -143,6 +150,25 @@ header .container .content .btns button {
     font-size: 20px;
 }
 
+.home {
+    min-height: 100vh;
+    background-color: black; 
+    
+    background-image: 
+      linear-gradient(to right, #121111 1px, transparent 0.8px),
+      linear-gradient(to bottom, #121111 1px, transparent 0.8px);
+    
+    background-size: 60px 60px;
+  }
+  .home .content{
+    margin-top: 50px;
+  }
+  .home #box{
+    margin-top:50px;
+    backdrop-filter: blur(10px);
+    background-color: rgba(20, 23, 24,70%);
+  }
+ 
 /* ================= RESPONSIVE ================= */
 
 /* tablets */
@@ -186,3 +212,55 @@ header .container .content .btns button {
 }
 
 /* end header */
+
+/* Start About section */
+.about{
+    min-height: 100vh;
+    margin-top: 100px;
+}
+.about .container{
+    text-align: center;
+}
+.about .grid-container{
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px; 
+    padding: 40px;
+}
+.about .card{
+    background-color: rgba(25, 26, 29,50%);
+    border:1px solid rgb(60, 60, 60);
+    border-radius:20px;
+    padding: 10px 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.about .card:hover{
+    border-color:var(--glass-color) ;
+    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.7);
+}
+.about .icon-box {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+  }
+  .about .icon-box i {
+    color: #00d1ff;           
+    background-color: #1a2226; 
+    width: 60px;                
+    height: 60px;
+    font-size: 30px;           
+    border-radius: 15px;       
+    border: 1px solid #233a3e;  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s ;
+}
+.about .card-text{
+    color:var(--p-color);
+    line-height: 1.8;
+}
+
+
+

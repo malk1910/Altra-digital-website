@@ -1,3 +1,4 @@
+// Moving the box at left in the home section
 let box = document.getElementById('box')
 box.addEventListener('mousemove' , (e)=>{
     let rect = box.getBoundingClientRect()
@@ -16,3 +17,4 @@ const centerY = rect.height / 2;
 box.addEventListener('mouseleave', () => {
   box.style.transform = `rotateX(0deg) rotateY(0deg)`
 })
+
