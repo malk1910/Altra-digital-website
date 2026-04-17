@@ -28,6 +28,16 @@ window.onscroll = function() {
   if (progress > 1) progress = 1;
   document.getElementById("myBar").style.transform = "scaleY(" + progress + ")";
 };
-
+// slide
+var swiper = new Swiper(".swiper", {
+  loop: true,
+  autoplay: {
+    delay: 2000,
+  },
+    navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+});
 
 
