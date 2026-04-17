@@ -18,3 +18,17 @@ box.addEventListener('mouseleave', () => {
   box.style.transform = `rotateX(0deg) rotateY(0deg)`
 })
 
+
+gsap.registerPlugin(ScrollTrigger);
+
+gsap.to("#myBar", {
+height: "100%",
+ease: "none",
+scrollTrigger: {
+trigger: ".timeline-section",
+start: "top 80%",
+end: "bottom 20%",
+scrub: true,
+markers:true
+}
+});
