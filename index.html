@@ -395,15 +395,26 @@
             <div class="left-content">
                 
                 <div class="contact-form-section">
-                    <h2>أرسل رسالة مباشرة</h2>
+                  <h3 class="mb-5 text-white text-right"> أرسل رسالة  <span class="text-info">مباشرة </span></h3>
               
                     <form>
-                      <input type="text" placeholder="الاسم الكامل" required>
+                     <input type="text" placeholder="الاسم الكامل" required >
                       <input type="email" placeholder="البريد الالكتروني" required>
-                      <input type="tel" placeholder="رقم الهاتف">
-                      <input type="text" placeholder="اختر الخدمات المطلوبه">
+                      <input type="text" placeholder="رقم الهاتف">
+
+                      <div class="select-group">
+                        <select name="service" required>
+                            <option value="" disabled selected>اختر الخدمة المطلوبة</option>
+                            <option value="social">إدارة السوشيال ميديا</option>
+                            <option value="ads">الإعلانات المدفوعة</option>
+                            <option value="seo">تحسين محركات البحث</option>
+                            <option value="web">تطوير المواقع</option>
+                            <option value="design">تصميم الهوية البصرية</option>
+                        </select>
+                    </div>
+
                       <textarea placeholder="تفاصيل المشروع او الرسالة" required></textarea>
-                      <button type="submit" class="submit-btn">ارسل الطلب</button>
+                      <button type="submit" class="submit-btn">إرسال الطلب</button>
                     </form>
                   </div>
 
@@ -415,6 +426,25 @@
     <!-- End Contact Section-->
 
     <!-- --------Footer Section-------- -->
+
+    <footer>
+      <div class="container">
+
+        <div class="column">
+          
+
+        </div>
+        <div class="column">
+          
+        </div>
+        <div class="column">
+          
+        </div>
+      </div>
+
+
+
+    </footer>
 
     <!-- End Footer Section-->
 

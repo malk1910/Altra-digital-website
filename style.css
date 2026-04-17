@@ -14,8 +14,8 @@ button {
 }
 :root{
     --main-color:#00d1ff;
-    --glass-color:#1a2226;
-    --border-color:#233a3e;
+    --glass-color:rgba(20, 22, 22);
+    --border-color:rgba(50, 50, 50);
     --p-color:rgba(143, 158, 179);
 }
 .home ,
@@ -487,7 +487,10 @@ header .container .content .btns button {
 .contact .container{
     display:grid;
     grid-template-columns: repeat(2, auto);
+    column-gap: 30px;
     padding-top: 70px;
+    padding-bottom: 70px;
+    
 }
 .contact-content p{
     color:var(--p-color);
@@ -495,8 +498,6 @@ header .container .content .btns button {
 .contact .info-list{
     display: flex;
     flex-direction: column;
-    gap:30px;
-
 }
 .contact .info-item{
     display: flex;
@@ -535,40 +536,50 @@ header .container .content .btns button {
     background-color: var(--glass-color);
     border:1px solid var(--border-color);
     border-radius: 10px;
-    padding: 30px;
+    padding: 70px;
   }
-  .contact-form-section h2 {
-    font-size: 26px;
-    text-align: center;
-    color: var(--main-color); 
-   }
-   .contact-form-section p{
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    margin: auto;
-    width:430px;
-    color:var(--p-color);
-    margin-bottom: 50px;
-
-   }
  .contact-form-section form {
     display: flex;
     flex-direction: column;
     gap: 10px;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
     align-items: center;
 }
 input, textarea {
-    width: 400px;
+    width: 500px;
     padding: 12px;
-    border: 1px solid var(--p-color);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
     outline: none;
-    background-color: white;
+    background-color: var(--glass-color);
+    color:gray;
+    margin-bottom: 20px;
+
 }
+input:focus,
+ textarea:focus{
+  border-color: var(--main-color) ;
+ }
+.select-group select{
+  width: 500px;
+    padding: 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    outline: none;
+    background-color:var(--glass-color);
+    color:gray;
+
+}
+.select-group select option{
+  background-color: black;
+  color:white;
+}
+
 .submit-btn {
-    background: var(--sub-color);
-    color: white;
+    background: var(--main-color);
+    width:500px;
+    border-radius: 10px;
+    color: black;
     border: none;
     padding: 15px 30px;
     font-weight: bold;
