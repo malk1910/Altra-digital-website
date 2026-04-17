@@ -364,28 +364,36 @@ header .container .content .btns button {
 .services .card:hover{
     border-color:var(--main-color) ;
 }
-.services .icon-box {
-    margin-bottom: 20px;
-    display: flex;
-    justify-content: center;
-  }
+
+
   .services .icon-box i {
     color: var(--main-color);           
-    background-color: #1a2226; 
     width: 60px;                
     height: 60px;
     font-size: 30px;           
-    border-radius: 15px;       
-    border: 1px solid #233a3e;  
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    text-align: right;
     transition: 0.3s ;
+}
+.services .card:hover .icon-box i {
+    transform: translateX(10px); 
 }
 .services .card-text{
     color:var(--p-color);
     line-height: 1.8;
 }
+.services a{
+    text-decoration: none;
+    color:var(--main-color);
+}
+.services .card:hover a i{
+    transition: 0.3s;
+}
+.services .card:hover a i{
+    transform: translateX(-10px); 
+
+}
+
+
 
 /* start slide */
  .slide_section {
