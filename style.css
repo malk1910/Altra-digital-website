@@ -18,6 +18,17 @@ button {
     --border-color:#233a3e;
     --p-color:rgba(143, 158, 179);
 }
+.home ,
+.services{
+    min-height: 100vh;
+    background-color: black; 
+    
+    background-image: 
+      linear-gradient(to right, #121111 1px, transparent 0.8px),
+      linear-gradient(to bottom, #121111 1px, transparent 0.8px);
+    
+    background-size: 60px 60px;
+  }
 /* start nav  */
 
 .navbar {
@@ -150,16 +161,6 @@ header .container .content .btns button {
     font-size: 20px;
 }
 
-.home {
-    min-height: 100vh;
-    background-color: black; 
-    
-    background-image: 
-      linear-gradient(to right, #121111 1px, transparent 0.8px),
-      linear-gradient(to bottom, #121111 1px, transparent 0.8px);
-    
-    background-size: 60px 60px;
-  }
   .home .content{
     margin-top: 50px;
   }
@@ -312,3 +313,77 @@ header .container .content .btns button {
         display: none ;
     }
 }
+
+
+/* Start services section */
+.services{
+    padding-top: 50px;
+    min-height: 100vh;
+}
+/* .services .services-content {
+    margin-top: 300px;
+} */
+.services .container p{
+   color:var(--p-color);
+}
+.services .grid-container{
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px; 
+    padding: 40px;
+}
+
+.services .card{
+    position: relative;
+    backdrop-filter: blur(10px);
+    background-color: rgba(20, 23, 24,70%);
+    border:1px solid rgb(60, 60, 60);
+    border-radius:20px;
+    padding: 10px 10px;
+    cursor: pointer;
+    overflow:hidden;
+    transition:0.8s;
+}
+
+.services .card::after {
+    content: '';
+    position: absolute;
+    width: 150%; 
+    height: 150%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: radial-gradient(circle, rgba(0, 209, 255, 0.15) 0%, rgba(20, 23, 24, 0) 50%);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    z-index: 0; 
+}
+.services .card:hover::after {
+    opacity: 1;
+}
+.services .card:hover{
+    border-color:var(--main-color) ;
+}
+.services .icon-box {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+  }
+  .services .icon-box i {
+    color: var(--main-color);           
+    background-color: #1a2226; 
+    width: 60px;                
+    height: 60px;
+    font-size: 30px;           
+    border-radius: 15px;       
+    border: 1px solid #233a3e;  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s ;
+}
+.services .card-text{
+    color:var(--p-color);
+    line-height: 1.8;
+}
+
