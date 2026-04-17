@@ -312,3 +312,89 @@ header .container .content .btns button {
         display: none ;
     }
 }
+
+/* start slide */
+ .slide_section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slide_section .swiper {
+  width: 60%;
+}
+
+.swiper-slide {
+ 
+  height: 200px;
+  color: white;
+  font-size: 24px;
+  border-radius: 10px;
+}
+
+.swiper-slide .stars {
+  color: gold;
+ }
+@media (max-width: 768px) {
+  .slide_section .swiper {
+    width: 70%;
+    
+  }
+}
+ 
+.custom-nav {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+ .swiper-button-next,
+.swiper-button-prev {
+  position: static !important;
+  margin: 0;
+}
+
+ .swiper-button-next,
+.swiper-button-prev {
+  background: rgba(0,0,0,0.6);
+  color: white;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+ transition: 0.5s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+ .swiper-button-next:hover,
+.swiper-button-prev:hover {
+  background-color: aqua;
+  
+
+}
+ .swiper-button-next:hover i,
+.swiper-button-prev:hover i {
+  
+  color: black;
+
+}
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  display: none;  
+}
+
+.swiper-button-next i,
+.swiper-button-prev i {
+  color: white;
+  font-size: 18px;
+  transition: 0.5s;
+}
+ .swiper-button-next:hover i,
+.swiper-button-prev:hover i {
+  
+  color: black;
+
+}
+/* end slide  */
