@@ -19,16 +19,15 @@ box.addEventListener('mouseleave', () => {
 })
 
 
-gsap.registerPlugin(ScrollTrigger);
+// Scroll bar in second part in about section
 
-gsap.to("#myBar", {
-height: "100%",
-ease: "none",
-scrollTrigger: {
-trigger: ".timeline-section",
-start: "top 80%",
-end: "bottom 20%",
-scrub: true,
-markers:true
-}
-});
+window.onscroll = function() {
+  let position = window.scrollY;
+  let progress = (position - 1100) / 500;
+  if (progress < 0) progress = 0;
+  if (progress > 1) progress = 1;
+  document.getElementById("myBar").style.transform = "scaleY(" + progress + ")";
+};
+
+
+
