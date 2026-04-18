@@ -321,9 +321,7 @@ header .container .content .btns button {
     padding-top: 50px;
     min-height: 100vh;
 }
-/* .services .services-content {
-    margin-top: 300px;
-} */
+
 .services .container p{
    color:var(--p-color);
 }
@@ -392,6 +390,11 @@ header .container .content .btns button {
 .services .card:hover a i{
     transform: translateX(-10px); 
 
+}
+@media(max-width:768px){
+  .services .services-content {
+    text-align: center;
+}
 }
 
 
