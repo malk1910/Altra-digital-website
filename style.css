@@ -546,7 +546,7 @@ header .container .content .btns button {
     align-items: center;
 }
 input, textarea {
-    width: 500px;
+    width: 100%;
     padding: 12px;
     border: 1px solid var(--border-color);
     border-radius: 10px;
@@ -560,8 +560,11 @@ input:focus,
  textarea:focus{
   border-color: var(--main-color) ;
  }
+ .select-group{
+  width: 100%;
+ }
 .select-group select{
-  width: 500px;
+  width: 100%;
     padding: 12px;
     border: 1px solid var(--border-color);
     border-radius: 10px;
@@ -573,6 +576,7 @@ input:focus,
 .select-group select option{
   background-color: black;
   color:white;
+  width:100%;
 }
 
 .submit-btn {
@@ -587,6 +591,36 @@ input:focus,
     margin-top: 10px;
 }
 
+/* ======= responsive ======= */
+@media (max-width: 992px) {
+  .contact .container {
+      grid-template-columns: 1fr; 
+      gap: 50px;
+      padding-left: 20px;
+      padding-right: 20px;
+  }
+  .right-content {
+      order: 1;
+  }
+  .left-content {
+      order: 2;
+  }
+    input, 
+    textarea, 
+    .select-group select, 
+    .submit-btn {
+        width: 100% !important;
+        max-width: 100%;
+    }
+    .contact-form-section {
+        padding: 30px 20px;
+    }
+
+    .map-section iframe {
+        width: 100%;
+    }
+
+}
 /* footer section */
 footer .container{
   display: grid;
